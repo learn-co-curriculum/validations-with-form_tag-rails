@@ -203,7 +203,7 @@ targeting the divs containing each field:
 And conditionally adding a class if there are errors:
 
 ```erb
-<div class="field<%= ' field_with_errors' if @person.errors[:name].any? %>">
+<div class="field <%= ' field_with_errors' if @person.errors[:name].any? %>">
   <%= label_tag "name", "Name" %>
   <%= text_field_tag "name", @person.name %>
 </div>
@@ -227,12 +227,12 @@ By now, our full form has grown quite a bit:
   <% end %>
 
   
-  <div class="field<%= ' field_with_errors' if @person.errors[:name].any? %>">
+  <div class="field <%= ' field_with_errors' if @person.errors[:name].any? %>">
     <%= label_tag "name", "Name" %>
     <%= text_field_tag "name", @person.name %>
   </div>
 
-  <div class="field<%= ' field_with_errors' if @person.errors[:email].any? %>">
+  <div class="field <%= ' field_with_errors' if @person.errors[:email].any? %>">
     <%= label_tag "email", "Email" %>
     <%= text_field_tag "email", @person.email %>
   </div>
